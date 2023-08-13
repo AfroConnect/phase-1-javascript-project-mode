@@ -1,0 +1,94 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "Title": "Little Miss Sunshine",
+      "Year": "2006",
+      "imdbID": "tt0449059",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTgzNTgzODU0NV5BMl5BanBnXkFtZTcwMjEyMjMzMQ@@._V1_SX300.jpg",
+      "likes": 0
+    },
+    {
+      "id": 2,
+      "Title": "The Little Mermaid",
+      "Year": "1989",
+      "imdbID": "tt0097757",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BOWUyNDA0ZmItMzg2My00YjJhLTk1N2QtYTAxYTc0NzMzNDI0XkEyXkFqcGdeQXVyMTI5NzUyMTIz._V1_SX300.jpg",
+      "likes": 3
+    },
+    {
+      "id": 3,
+      "Title": "Little Women",
+      "Year": "2019",
+      "imdbID": "tt3281548",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BY2QzYTQyYzItMzAwYi00YjZlLThjNTUtNzMyMDdkYzJiNWM4XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
+      "likes": 0
+    },
+    {
+      "id": 4,
+      "Title": "Big Little Lies",
+      "Year": "2017–2019",
+      "imdbID": "tt3920596",
+      "Type": "series",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BZmNjYzdjN2ItOTBlNy00Mjc0LWE4YmMtYTQ4ZjQzNTMyNDc4XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
+      "likes": 0
+    },
+    {
+      "id": 5,
+      "Title": "Pretty Little Liars",
+      "Year": "2010–2017",
+      "imdbID": "tt1578873",
+      "Type": "series",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTU5MDYzMzQ2Nl5BMl5BanBnXkFtZTgwMDE3MzU4MTI@._V1_SX300.jpg",
+      "likes": 0
+    },
+    {
+      "id": 6,
+      "Title": "Big Trouble in Little China",
+      "Year": "1986",
+      "imdbID": "tt0090728",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BNzlhYjEzOGItN2MwNS00ODRiLWE5OTItYThiNmJlMTdmMzgxXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg",
+      "likes": 0
+    },
+    {
+      "id": 7,
+      "Title": "Stuart Little",
+      "Year": "1999",
+      "imdbID": "tt0164912",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMDJlZWZiODItMGE3NC00Yzg3LWFhYTYtZTI2YWNlNjExMDE4XkEyXkFqcGdeQXVyMTA0MjU0Ng@@._V1_SX300.jpg",
+      "likes": 0
+    },
+    {
+      "id": 8,
+      "Title": "Little Fockers",
+      "Year": "2010",
+      "imdbID": "tt0970866",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTkwNjE3NjQwOV5BMl5BanBnXkFtZTcwNzAyNTMwNA@@._V1_SX300.jpg",
+      "likes": 0
+    },
+    {
+      "id": 9,
+      "Title": "Little Children",
+      "Year": "2006",
+      "imdbID": "tt0404203",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTYwNzEwNTI3MV5BMl5BanBnXkFtZTcwODUyODczMQ@@._V1_SX300.jpg",
+      "likes": 0
+    },
+    {
+      "id": 10,
+      "Title": "The Little Things",
+      "Year": "2021",
+      "imdbID": "tt10016180",
+      "Type": "movie",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BOGFlNTdmYWQtM2IzMi00YTY3LTlmMDQtZDI5NGQ5MjYzZmEwXkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_SX300.jpg",
+      "likes": 0
+    }
+  ]
+}
