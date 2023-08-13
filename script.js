@@ -1,20 +1,27 @@
-const apiKey = '287095b2'; // Replace with your actual API key
 const searchInput = document.getElementById('searchInput');
 const movieContainer = document.getElementById('movieContainer');
-let movies = [];
 
-// Function to fetch movie data from the OMDB API
-async function fetchMovieData(query) {
-    const response = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=${query}`);
+// Function to fetch movie data from the json-server API
+async function fetchMovieData(query = '') {
+    const response = await fetch(`http://localhost:3000/movies?Title_like=${query}`);
     const data = await response.json();
-    return data.Search;
+    return data;
 }
 
 // Function to update upvote count for a movie
-function updateUpvote(movieCard, movie) {
-    const upvoteCountElement = movieCard.querySelector('.upvote-count');
-    movie.upvotes = (movie.upvotes || 0) + 1;
-    upvoteCountElement.textContent = movie.upvotes;
+async function updateUpvote(movieId, updatedMovie) {
+    const response = await fetch(`http://localhost:3000/movies/${movieId}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(updatedMovie)
+    });
+
+    if (response.ok) {
+        const updatedData = await fetchMovieData();
+        displayMovies(updatedData);
+    }
 }
 
 // Function to display movie cards
@@ -30,8 +37,19 @@ function displayMovies(movies) {
             <h2>${movie.Title}</h2>
             <p>Year: ${movie.Year}</p>
             <button class="upvote-btn">Upvote</button>
-            <span class="upvote-count">${movie.upvotes || 0}</span>
+            <span class="upvote-count">${movie.likes || 0}</span>
         `;
+
+        const upvoteButton = movieCard.querySelector('.upvote-btn');
+        const upvoteCountElement = movieCard.querySelector('.upvote-count');
+
+        upvoteButton.addEventListener('click', async (event) => {
+            event.preventDefault(); // Prevent the default behavior
+            event.stopPropagation(); // Prevent event bubbling
+
+            movie.likes = (movie.likes || 0) + 1;
+            await updateUpvote(movie.id, movie);
+        });
 
         movieContainer.appendChild(movieCard);
     });
@@ -40,22 +58,18 @@ function displayMovies(movies) {
 // Event listener for search input
 searchInput.addEventListener('input', async (event) => {
     const query = event.target.value;
-    
+
     if (query.length >= 3) {
-        movies = await fetchMovieData(query);
-        displayMovies(movies);
+        const filteredMovies = await fetchMovieData(query);
+        displayMovies(filteredMovies);
+    } else {
+        const allMovies = await fetchMovieData();
+        displayMovies(allMovies);
     }
 });
 
-// Event listener for upvote buttons
-movieContainer.addEventListener('click', (event) => {
-    if (event.target.classList.contains('upvote-btn')) {
-        const movieCard = event.target.closest('.movie-card');
-        const movieTitle = movieCard.querySelector('h2').textContent;
-
-        const selectedMovie = movies.find(movie => movie.Title === movieTitle);
-        if (selectedMovie) {
-            updateUpvote(movieCard, selectedMovie);
-        }
-    }
-});
+// Initial load of all movies
+(async () => {
+    const allMovies = await fetchMovieData();
+    displayMovies(allMovies);
+})();
