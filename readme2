@@ -1,0 +1,49 @@
+
+Movie Upvote SPA (Single Page Application)
+This is a Single Page Application (SPA) that allows users to search and upvote movies. The application is built using HTML, CSS, and JavaScript, and it interacts with a JSON database (db.json) via a local server.
+
+Features
+Search Movies: Users can search for movies by typing at least three characters into the search input. The application fetches movies whose titles match the search query and displays them dynamically.
+
+Upvote Movies: Users can upvote their favorite movies by clicking the "Upvote" button on each movie card. The upvote count is updated in real-time, and the updated data is fetched from the server.
+
+Installation
+Clone the repository or download the code files to your local machine.
+
+Make sure you have Node.js installed.
+
+Install the required packages by navigating to the project folder in your terminal and running the following command:
+
+Copy code
+npm install
+Usage
+Start the JSON server to provide the movie data:
+
+arduino
+Copy code
+npm run server
+This will start a local server at http://localhost:3000 that serves the movie data from the db.json file.
+
+Open the index.html file in a web browser to launch the application.
+
+Use the search input to look for movies by typing at least three characters. The application will display matching movies dynamically.
+
+Click the "Upvote" button on a movie card to increase its upvote count. The count will update in real-time, and the data will be updated on the server.
+
+Technologies Used
+HTML
+CSS
+JavaScript
+JSON Server
+Project Structure
+index.html: The main HTML file that defines the structure of the application.
+style.css: The CSS file for styling the application.
+script.js: The JavaScript file containing the logic for fetching and displaying movies, handling upvotes, and search functionality.
+db.json: The JSON database file containing movie data.
+Acknowledgments
+This project was created as a learning exercise and is based on the concept of building SPAs with dynamic data retrieval and manipulation.
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+Feel free to customize and extend this SPA to add more features and enhance its functionality according to your needs. If you have any questions or need assistance, please don't hesitate to reach out theo@afroconnect.app. Happy coding!
